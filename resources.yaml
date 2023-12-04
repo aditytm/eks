@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: yashrepo
-        image:  public.ecr.aws/k7y1q1q5/yashrepo:latest
+        image:  public.ecr.aws/k7y1q1q5/yashrepo@sha256:9946908a9d188b8d8fdcb386f4c9327e8739bd92538cdc986e1e4db168b9df00
 ---
 apiVersion: v1
 kind: Service
