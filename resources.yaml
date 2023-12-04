@@ -1,33 +1,33 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rajni
+  name: yashrepo
   namespace: default
   labels:
-    app: rajni
+    app: yashrepo
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: rajni
+      app: yashrepo
   template:
     metadata:
       labels:
-        app: rajni
+        app: yashrepo
     spec:
       containers:
-      - name: rajni
-        image: us-central1-docker.pkg.dev/GOOGLE_PROJECT/demo/rajni:latest
+      - name: yashrepo
+        image:  public.ecr.aws/k7y1q1q5/yashrepo:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: rajni-service
+  name: yashrepo-service
   namespace: default
 spec:
   type: LoadBalancer
   selector:
-    app: rajni
+    app: yashrepo
   ports:
   - port: 80
     targetPort: 80
