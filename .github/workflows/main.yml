@@ -42,4 +42,4 @@ jobs:
       run: aws eks --region ca-central-1 update-kubeconfig --name aditya
     
     - name: Deploy to EKS
-      run: kubectl apply -f resources.yaml
+      run: kubectl login | kubectl apply -f resources.yaml
