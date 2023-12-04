@@ -28,7 +28,8 @@ jobs:
           docker push public.ecr.aws/k7y1q1q5/yashrepo:latest
 
       - name: Configure kubectl
-        run: aws eks update-kubeconfig --name aditya
+        run: aws eks --region ca-central-1 update-kubeconfig --name aditya
+
 
 
       - name: Deploy to EKS
